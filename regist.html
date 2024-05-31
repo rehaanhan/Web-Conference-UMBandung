@@ -1,53 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
-    <link rel="stylesheet" href="/css/styleRegist.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
-
+	<title>Halaman Registrasi</title>
+	<link rel="stylesheet" type="text/css" href="css/styleRegist.css">
 </head>
 <body>
-    <div class="container">
-        <div class="title">Form Registration</div>
-        <div class="content">
-            <form action="#">
-                <div class="user-details">
-                    <div class="input-inbox">
-                        <span class="details">Full Name</span>
-                        <input type="text" placeholder="Enter your full name">
-                    </div>
-                    <div class="input-inbox">
-                        <span class="details">Email</span>
-                        <input type="text" placeholder="Enter your email">
-                    </div>
-                    <div class="input-inbox">
-                        <span class="details">Phone Number</span>
-                        <input type="text" placeholder="Enter your phone number">
-                    </div>
-                    <div class="gender-details">
-                        <input type="radio" name="gender" id="dot-1">
-                        <input type="radio" name="gender" id="dot-2">
-                        <span class="gender-title">Gender</span>
-                        <div class="category">
-                            <label for="dot-1">
-                                <span class="dot one"></span>
-                                <span class="gender">Male</span>
-                            </label>
-                            <label for="dot-2">
-                                <span class="dot two"></span>
-                                <span class="gender">Female</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <input type="submit" value="SignUp">
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+	<div class="container">
+		<h2>Halaman Registrasi</h2>
+		<form>
+			<div class="form-group">
+				<label for="nama_lengkap" class="label">Nama Lengkap:</label>
+				<input type="text" id="nama_lengkap" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label for="email" class="label">Email:</label>
+				<input type="email" id="email" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label for="phone_number" class="label">Phone Number:</label>
+				<input type="text" id="phone_number" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label for="salutation" class="label">Salutation:</label>
+				<select id="salutation" class="select-control" required>
+					<option value="">-- Pilih --</option>
+					<option value="mr">Mr.</option>
+					<option value="mrs">Mrs.</option>
+					<option value="ms">Ms.</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="status_participant" class="label">Status Participant:</label>
+				<select id="status_participant" class="select-control" required>
+					<option value="">-- Pilih --</option>
+					<option value="teachers_staff">Teachers/Staff</option>
+					<option value="undergraduate_student">Undergraduate Student</option>
+					<option value="postgraduate_student">Postgraduate Student</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="nationality" class="label">Kewarganegaraan:</label>
+				<select id="nationality" class="select-control" required>
+					<option value="">-- Pilih --</option>
+					<!-- isi dengan pilihan kewarganegaraan -->
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="from_campus_a" class="label">Apakah dari Kampus A?</label>
+				<select id="from_campus_a" class="select-control" required>
+					<option value="">-- Pilih --</option>
+					<option value="yes">Ya</option>
+					<option value="no">Tidak</option>
+				</select>
+				<div id="other_campus" style="display: none;">
+					<label for="other_campus_name" class="label">Nama Kampus Asal:</label>
+					<input type="text" id="other_campus_name" class="form-control">
+				</div>
+			</div>
+			<button class="button" type="submit">Daftar</button>
+		</form>
+	</div>
+	
+	<script>
+		document.getElementById('from_campus_a').addEventListener('change', function() {
+			if (this.value === 'no') {
+				document.getElementById('other_campus').style.display = 'block';
+			} else {
+				document.getElementById('other_campus').style.display = 'none';
+			}
+		});
+	</script>
 </body>
 </html>

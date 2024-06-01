@@ -1,3 +1,19 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = ""; // Kosongkan jika tidak ada password
+
+// Membuat koneksi
+$conn = new mysqli($servername, $username, $password);
+
+// Mengecek koneksi
+if ($conn->connect_error) {
+    die("Koneksi gagal: " . $conn->connect_error);
+}
+echo "Koneksi berhasil!";
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +25,7 @@
 		<h2>Halaman Registrasi</h2>
 		<form>
 			<div class="form-group">
-				<label for="nama_lengkap" class="label">Nama Lengkap:</label>
+				<label for="nama_lengkap" class="label">Full Name</label>
 				<input type="text" id="nama_lengkap" class="form-control" required>
 			</div>
 			<div class="form-group">

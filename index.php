@@ -87,9 +87,9 @@
     <section id="about">
       <div class="container">
         <div class="aboutnav">
-          <div class="navigasion">Register</div>
-          <div class="navigasion">Login</div>
-          <div class="navigasion">schedule</div>
+          <a href="regist.php" class="navigasion"><img src="img/register-icon.png" alt="Register Icon">Register</a>
+          <a href="login.php" class="navigasion"><img src="img/login-icon.png" alt="Login Icon"> Login</a>
+          <a href="#schedule" class="navigasion"><img src="img/calendar.png" alt="Schedule Icon"> Schedule</a>
         </div>
       </div>
     </section>

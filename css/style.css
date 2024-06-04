@@ -659,15 +659,40 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: flex;
   justify-content: center;
   align-items: center;
+   /* Mengubah warna teks menjadi hitam */
 }
 
 .navigasion{
   width: 30%;
   margin: 10px 15px;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  background-color: #CEBBC9;
   padding: 25px;
 }
+
+.navigasion:hover{
+  cursor: pointer;
+  color: #E99FD4;
+  background-color: #BA90AF;
+  transition: cubic-bezier(0.215, 0.061, 0.355, 1) ease-in-out;
+  transform: scale(110%);
+  -webkit-transform: scale(110%);
+  -moz-transform: scale(110%);
+  -ms-transform: scale(110%);
+  -o-transform: scale(110%);
+  -webkit-transform: cubic-bezier(0.215, 0.061, 0.355, 1) ease-in-out;
+  -moz-transition: cubic-bezier(0.215, 0.061, 0.355, 1) ease-in-out;
+  -ms-transition: cubic-bezier(0.215, 0.061, 0.355, 1) ease-in-out;
+  -o-transition: cubic-bezier(0.215, 0.061, 0.355, 1) ease-in-out;
+}
+
+.navigasion img {
+  display: block; /* Membuat gambar menjadi blok sehingga teks berada di bawahnya */
+  margin: auto; /* Pusatkan gambar */
+}
+
 /*--------------------------------------------------------------
 # Speakers Section
 --------------------------------------------------------------*/
